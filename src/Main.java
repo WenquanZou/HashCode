@@ -13,7 +13,7 @@ public class Main {
 		BufferedReader buffer = new BufferedReader(file);
 		String s;
 		Queue<Ride> allRides = new PriorityQueue<>();
-		List<Ride.Car> allCars = new LinkedList<>();
+		List<Car> allCars = new LinkedList<>();
 		int i = 1;
 		int timer = 0;
 		StringTokenizer st = new StringTokenizer(buffer.readLine());
