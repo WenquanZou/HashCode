@@ -8,6 +8,7 @@ public class Ride {
 	private Coordinate end;
 	private int startTime;
 	private int endTime;
+	private int distance;
 
 
 	public Ride(int index, String s) {
@@ -17,5 +18,10 @@ public class Ride {
 		this.end = new Coordinate(Integer.valueOf(st.nextToken()), Integer.valueOf(st.nextToken()));
 		this.startTime = Integer.valueOf(st.nextToken());
 		this.endTime = Integer.valueOf(st.nextToken());
+		this.distance = this.start.findDistance(this.end);
+	}
+
+	public boolean isImpossible() {
+		return distance < endTime - startTime;
 	}
 }
