@@ -24,4 +24,8 @@ public class Ride {
 	public boolean isImpossible() {
 		return distance < endTime - startTime;
 	}
+
+	public int getStartTime() {
+		return startTime;
+	}
 }
